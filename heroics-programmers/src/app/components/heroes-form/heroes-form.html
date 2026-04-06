@@ -5,7 +5,7 @@
 
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-      <input type="text" placeholder="Name" formControlName="name">
+      <input type="text" placeholder="Nombre" formControlName="name">
       @if (f.name.touched && f.name.invalid) {
         <small> Pon nombre </small>
       }
@@ -17,22 +17,22 @@
 
       <select formControlName="role">
         <option value="">Rol</option>
-        <option value="knight">Knight</option>
-        <option value="mage">Mage</option>
-        <option value="archer">Archer</option>
-        <option value="support">Support</option>
+        <option value="knight">Caballero</option>
+        <option value="mage">Mago</option>
+        <option value="archer">Sniper</option>
+        <option value="support">Soporte</option>
       </select>
 
       @if (f.role.touched && f.role.invalid) {
         <small> Y el rol campeon? </small>
       }
 
-      <input type="password" placeholder="Password" formControlName="password">
+      <input type="password" placeholder="Contrasena" formControlName="password">
       @if (f.password.touched && f.password.invalid) {
         <small> 6 caracteres minimo </small>
       }
 
-      <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+      <input type="password" placeholder="Confirmar Contrasena" formControlName="confirmPassword">
 
       @if (message.includes('match')) {
         <small> No es igual </small>
