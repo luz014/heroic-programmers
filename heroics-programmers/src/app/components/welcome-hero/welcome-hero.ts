@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
   templateUrl: './welcome-hero.html',
   styleUrl: './welcome-hero.sass',
 })
-export class WelcomeHero {}
+export class WelcomeHero {heroName: string = "Isaac";}
+
