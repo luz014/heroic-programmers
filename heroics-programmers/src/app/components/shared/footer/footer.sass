@@ -1,0 +1,46 @@
+$color-bg-dark: #0a0a0a
+$color-accent: #f5c542
+$color-text: #ffffff
+
+.custom-footer
+  background: linear-gradient(180deg, #000, $color-bg-dark)
+  padding: 1rem 0
+  text-align: center
+  border-top: 0.0625rem solid rgba(245, 197, 66, 0.2)
+
+  p
+    color: $color-text
+    margin: 0.2rem 0
+    font-size: 0.9rem
+
+    strong
+      color: $color-accent
+
+  .members
+    display: flex
+    justify-content: center
+    gap: 1.5rem
+    margin-top: 0.5rem
+
+    span
+      color: $color-text
+      font-size: 0.85rem
+      position: relative
+      cursor: default
+      transition: 0.3s
+
+      &:hover
+        color: $color-accent
+
+      &::after
+        content: ""
+        position: absolute
+        left: 0
+        bottom: -0.2rem
+        width: 0%
+        height: 0.1rem
+        background: $color-accent
+        transition: 0.3s
+
+      &:hover::after
+        width: 100%
