@@ -1,1 +1,48 @@
-<p>heroes-form works!</p>
+<div class="form-container">
+  <div class="form-box">
+
+    <h2> Para registrarse</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <input type="text" placeholder="Name" formControlName="name">
+      @if (f.name.touched && f.name.invalid) {
+        <small> Pon nombre </small>
+      }
+
+      <input type="email" placeholder="Email" formControlName="email">
+      @if (f.email.touched && f.email.invalid) {
+        <small> Email </small>
+      }
+
+      <select formControlName="role">
+        <option value="">Rol</option>
+        <option value="knight">Knight</option>
+        <option value="mage">Mage</option>
+        <option value="archer">Archer</option>
+        <option value="support">Support</option>
+      </select>
+
+      @if (f.role.touched && f.role.invalid) {
+        <small> Y el rol campeon? </small>
+      }
+
+      <input type="password" placeholder="Password" formControlName="password">
+      @if (f.password.touched && f.password.invalid) {
+        <small> 6 caracteres minimo </small>
+      }
+
+      <input type="password" placeholder="Confirm Password" formControlName="confirmPassword">
+
+      @if (message.includes('match')) {
+        <small> No es igual </small>
+      }
+
+      <button type="submit"> Registrarse </button>
+
+    </form>
+
+    <p>{{ message }}</p>
+
+  </div>
+</div>
