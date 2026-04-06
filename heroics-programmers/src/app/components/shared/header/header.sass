@@ -1,0 +1,38 @@
+.custom-navbar
+  background: linear-gradient(180deg, #0a0a0a, #000)
+  padding: 0.75rem 0
+
+  .container-fluid
+    display: flex
+    justify-content: center
+
+  .navbar-nav
+    display: flex
+    flex-direction: row
+    gap: 3.5rem
+
+  .nav-link
+    color: #ffffff
+    position: relative
+
+    &:hover
+      color: #f5c542
+
+    &::after
+      content: ""
+      position: absolute
+      left: 0
+      bottom: -0.375rem
+      width: 0%
+      height: 0.125rem
+      background: #f5c542
+      transition: 0.3s
+
+    &:hover::after
+      width: 100%
+
+  .active
+    color: #f5c542
+
+    &::after
+      width: 100%

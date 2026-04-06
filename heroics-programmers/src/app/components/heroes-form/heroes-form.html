@@ -1,0 +1,48 @@
+<div class="form-container">
+  <div class="form-box">
+
+    <h2> Para registrarse</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <input type="text" placeholder="Nombre" formControlName="name">
+      @if (f.name.touched && f.name.invalid) {
+        <small> Pon nombre </small>
+      }
+
+      <input type="email" placeholder="Email" formControlName="email">
+      @if (f.email.touched && f.email.invalid) {
+        <small> Email </small>
+      }
+
+      <select formControlName="role">
+        <option value="">Rol</option>
+        <option value="knight">Caballero</option>
+        <option value="mage">Mago</option>
+        <option value="archer">Sniper</option>
+        <option value="support">Soporte</option>
+      </select>
+
+      @if (f.role.touched && f.role.invalid) {
+        <small> Y el rol campeon? </small>
+      }
+
+      <input type="password" placeholder="Contrasena" formControlName="password">
+      @if (f.password.touched && f.password.invalid) {
+        <small> 6 caracteres minimo </small>
+      }
+
+      <input type="password" placeholder="Confirmar Contrasena" formControlName="confirmPassword">
+
+      @if (message.includes('match')) {
+        <small> No es igual </small>
+      }
+
+      <button type="submit"> Registrarse </button>
+
+    </form>
+
+    <p>{{ message }}</p>
+
+  </div>
+</div>

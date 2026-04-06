@@ -1,0 +1,43 @@
+$color-bg-dark: #000
+$color-accent: #f5c542
+$color-text: #e0e0e0
+
+h1
+  text-align: center
+  color: $color-accent
+  margin-top: 2rem
+  margin-bottom: 1.5rem
+  font-size: 1.8rem
+  letter-spacing: 0.08rem
+  text-shadow: 0 0 0.6rem rgba(245, 197, 66, 0.4)
+
+.story
+  max-width: 40.6rem
+  margin: 0 auto 4rem auto
+  padding: 2rem
+
+  background: rgba(10, 10, 10, 0.95)
+  border-left: 0.25rem solid $color-accent
+  border-radius: 0.6rem
+
+  color: $color-text
+  font-size: 1rem
+  line-height: 2
+  text-align: center
+
+  font-style: italic
+  letter-spacing: 0.05rem
+
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.9)
+  transition: all 0.4s ease
+
+  &::first-letter
+    font-size: 2.8rem
+    color: $color-accent
+    font-weight: bold
+    display: block
+    margin-bottom: 0.5rem
+
+  &:hover
+    box-shadow: 0 0 2rem rgba(238, 34, 34, 0.3)
+    transform: scale(1.02)
